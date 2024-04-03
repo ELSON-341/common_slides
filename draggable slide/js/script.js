@@ -11,7 +11,7 @@ const events = {
 
 let deviceType = ''
 
-function isTouchDevice {
+function isTouchDevice() {
     try {
         document.createEvent('TouchEvent')
         deviceType = 'touch'
@@ -38,6 +38,6 @@ function handleDown(e) {
     const clienX = e.touches ? e.touches[0].clienX : e.clienX 
     const containerRect = sliderContainer.getBoundingClientRect()
     const sliderRect = innerSlider.getBoundingClientRect()
-    startX = clienX - (sliderRect.left - containerRect.left) 
+    startX = clienX - (sliderRect.left - containerRect.left)
     sliderContainer.style.cursor = "grabbing"
 }
